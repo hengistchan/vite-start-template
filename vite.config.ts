@@ -1,4 +1,3 @@
-// const path = require("path");
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -6,11 +5,12 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 const { dependencies } = require("./package.json");
+import Unocss from "unocss/vite";
 
 const chunks = Object.entries(dependencies as { [key: string]: string }).map(
   ([key, value]) => key,
 );
-// https://vitejs.dev/config/
+
 export default defineConfig({
   base: "/",
   plugins: [
@@ -18,8 +18,9 @@ export default defineConfig({
     vueJsx({
       transformOn: true,
     }),
-    AutoImport(),
-    Components(),
+    // AutoImport({}),
+    // Components({}),
+    Unocss(),
   ],
   build: {
     cssCodeSplit: true,
