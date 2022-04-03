@@ -9,6 +9,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.0
   '@vitejs/plugin-vue-jsx': ^1.3.9
   '@vueuse/core': ^8.2.3
+  classnames: ^2.3.1
   eslint: ^8.12.0
   eslint-config-prettier: ^8.5.0
   eslint-define-config: ^1.3.0
@@ -36,6 +37,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.15.0_eslint@8.12.0+typescript@4.6.3
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.1+vue@3.2.31
   '@vitejs/plugin-vue-jsx': 1.3.9
+  classnames: 2.3.1
   eslint: 8.12.0
   eslint-config-prettier: 8.5.0_eslint@8.12.0
   eslint-define-config: 1.3.0
@@ -1154,6 +1156,10 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
     dev: true
 
   /color-convert/1.9.3:

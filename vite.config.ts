@@ -18,12 +18,19 @@ export default defineConfig({
     vueJsx({
       transformOn: true,
     }),
-    // AutoImport({}),
+    AutoImport({
+      imports: [
+        {
+          classnames: [["default", "classnames"]],
+        },
+      ],
+      dts: "./types/auto-imports.d.ts",
+    }),
     // Components({}),
     Unocss(),
   ],
   build: {
-    cssCodeSplit: true,
+    // cssCodeSplit: true,
     target: "modules",
     minify: "terser",
     terserOptions: {
